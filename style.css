@@ -1,0 +1,14 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(73, 73, 73);
+}
+
+input {
+    background-color: darkgray;
+    color: black;
+}
+
+button {
+    background-color: rgb(108, 108, 108);
+    color: aliceblue;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Problema del viajero</title>
+</head>
+
+<body>
+    <form id="especificaciones">
+        <header>
+            <h1>Problema del Viajero</h1>
+        </header>
+
+        <section>
+            <label for="ciudades">Número de ciudades:</label>
+            <input type="number" id="ciudades" name="ciudades" required>
+        </section>
+
+        <section>
+            <h4>Hiperparámetros</h4>
+            <label for="poblacion">Tamaño de la población:</label>
+            <input type="number" id="poblacion" name="poblacion" required>
+
+            <label for="recombinacion">Recombinación:</label>
+            <input type="number" id="recombinacion" name="recombinacion" required>
+
+            <label for="mutacion">Mutación:</label>
+            <input type="number" id="mutacion" name="mutacion" required>
+
+            <label for="generaciones">Número de generaciones:</label>
+            <input type="number" id="generaciones" name="generaciones" required>
+
+            <button type="button" onclick="validateForm()">Guardar</button>
+            <div id="error-message" class="error"></div>
+        </section>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Obtener los valores ingresados por el usuario
+            var ciudades = document.getElementById('ciudades').value;
+            var poblacion = document.getElementById('poblacion').value;
+            var recombinacion = document.getElementById('recombinacion').value;
+            var mutacion = document.getElementById('mutacion').value;
+            var generaciones = document.getElementById('generaciones').value;
+
+            // Validar que todos los campos estén completos
+            if (!ciudades || !poblacion || !recombinacion || !mutacion || !generaciones) {
+                document.getElementById('error-message').innerText = 'Por favor, complete todos los campos.';
+                return;
+            }
+
+            // Restablecer el mensaje de error
+            document.getElementById('error-message').innerText = '';
+
+            // Realizar alguna acción con los valores (puedes enviarlos a un servidor o realizar cálculos locales)
+            alert('Formulario enviado.');
+        }
+    </script>
+</body>
+
+</html>
